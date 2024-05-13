@@ -11,6 +11,9 @@ const globalErrorHandler = require('./controllers/errorController');
 const userRouter = require('./routes/userRoutes');
 const transactionRouter = require('./routes/transactionRoutes');
 
+const cors = require("cors");
+
+app.use(cors({ origin: `*` }));
 const app = express();
 
 // 1) GLOBAL MIDDLEWARES
