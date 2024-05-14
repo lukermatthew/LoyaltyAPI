@@ -11,10 +11,10 @@ const globalErrorHandler = require('./controllers/errorController');
 const userRouter = require('./routes/userRoutes');
 const transactionRouter = require('./routes/transactionRoutes');
 
-const cors = require("cors");
+const cors = require('cors');
 
-app.use(cors({ origin: `*` }));
 const app = express();
+app.use(cors({ origin: `*` }));
 
 // 1) GLOBAL MIDDLEWARES
 // Set security HTTP headers
