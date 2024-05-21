@@ -13,8 +13,8 @@ const transactionSchema = new mongoose.Schema(
       minlength: [8, 'A transasction no must have less than 8 characters']
       // validate: [validator.isAlpha, 'Tour name must only contain characters']
     },
-    branch: {
-      type: Number,
+    branchName: {
+      type: String,
       required: [true, 'A transaction must have a branch']
     },
     type: {
