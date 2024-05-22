@@ -23,10 +23,33 @@ const userSchema = new mongoose.Schema({
     type: Number,
     required: [true, 'A transaction must have a points']
   },
+
+  gender: {
+    type: String
+  },
+  dateOfBirth: {
+    type: String
+  },
+  address: {
+    type: String
+  },
+  city: {
+    type: String
+  },
+  province: {
+    type: String
+  },
+  barangay: {
+    type: String,
+    required: [true, 'A User must have a barangay']
+  },
+  contactNo: {
+    type: String
+  },
   photo: String,
   role: {
     type: String,
-    enum: ['user', 'guide', 'lead-guide', 'admin'],
+    enum: ['user', 'admin'],
     default: 'user'
   },
   password: {
